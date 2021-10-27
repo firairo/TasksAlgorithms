@@ -144,9 +144,9 @@ class MainActivity : AppCompatActivity() {
         val lookup = mutableMapOf<String, Int>()
         for (key in myArray) {
             if (lookup.containsKey(key)) {
-                lookup.put(key, lookup.get(key)!!.plus(1))
+                lookup[key] = lookup[key]!!.plus(1)
             } else {
-                lookup.put(key, 1)
+                lookup[key] = 1
             }
         }
        println(lookup.toString())
